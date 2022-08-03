@@ -1,0 +1,31 @@
+<div class="container main-container">
+   <b>Emit:</b>
+   <div class="form-check">
+      <input
+         class="form-check-input"
+         type="radio"
+         name="radioOptions"
+         id="numbers"
+         [value]="Option.NUMBERS"
+         [(ngModel)]="selected"
+         (ngModelChange)="selectionChanged($event)"
+      />
+      <label class="form-check-label" for="numbers"> Numbers </label>
+   </div>
+   <div class="form-check">
+      <input
+         class="form-check-input"
+         type="radio"
+         name="radioOptions"
+         id="letters"
+         value="letters"
+         [(ngModel)]="selected"
+         (ngModelChange)="selectionChanged($event)"
+      />
+      <label class="form-check-label" for="letters"> Letters </label>
+   </div>
+   <div class="component-wrapper">
+      <app-regular [data$]="data$"></app-regular>
+      <app-dope [data$]="data$"></app-dope>
+   </div>
+</div>
